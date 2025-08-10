@@ -19,132 +19,150 @@
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
     <div class="container brand">
-      <div class="left">
-        <a class="logo" href="#">
-          <div class="mark" aria-hidden="true">ND</div>
-          <div>
-            <h1>Nelly Digital</h1>
-            <div style="font-size:12px;color:rgba(255,255,255,0.9)">Vision Beyond Sound</div>
-          </div>
-        </a>
-      </div>
+      <a class="logo" href="#home">
+        <div class="mark" aria-hidden="true">ND</div>
+        <h1>Nelly Digital</h1>
+      </a>
 
       <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero container" aria-label="Intro">
-  <div class="hero-content">
-    <div class="eyebrow">Graphics & Web for Students and Startups — Kampala</div>
-    <h1>Designs that speak louder than sound.</h1>
-    <p class="lead">I help schools, students, and local businesses look professional online — logos, websites, social branding, and print that convert.</p>
+  <main class="container">
 
-    <div class="cta-group" role="group" aria-label="Call to action">
-      <a class="btn" href="#contact">Start your project</a>
-      <a class="btn secondary" href="#portfolio">View work</a>
-    </div>
-  </div>
+    <!-- HOME (Hero section, scroll target) -->
+    <section id="home" class="hero" aria-label="Intro">
+      <div class="hero-content">
+        <div class="eyebrow">Graphics & Web for Students and Startups — Kampala</div>
+        <h1>Designs that speak louder than sound.</h1>
+        <p class="lead">I help schools, students, and local businesses look professional online — logos, websites, social branding, and print that convert.</p>
 
-  <aside class="hero-card" aria-label="Quick package offer">
-    <h3>Starter Package</h3>
-    <div class="price">UGX 75,000</div>
-    <p class="muted">Logo + 1-page site</p>
-    <a class="btn" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I'm%20interested%20in%20the%20Starter%20Package" target="_blank" rel="noopener">Book on WhatsApp</a>
-  </aside>
-</section>
-
- <section id="about" class="about container">
-  <h3 class="section-title">About Nelly</h3>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I’m Nelly — a web & graphics designer based in Kampala. I lost part of my hearing while studying, and that sharpened how I see design. I build visual systems that help businesses and students get noticed and trusted online.</p>
-      <p class="muted">I focus on fast delivery, clear communication, and real outcomes: more leads, better professional presence, and confident clients.</p>
-    </div>
-    <div class="about-stats">
-      <div class="stat-item">
-        <strong>5+</strong> student brands launched
+        <div class="cta-group" role="group" aria-label="Call to action">
+          <a class="btn" href="#contact">Start your project</a>
+          <a class="btn secondary" href="#portfolio">View work</a>
+        </div>
       </div>
-      <div class="stat-item">
-        <strong>10+</strong> local businesses improved
-      </div>
-      <div class="stat-item">
-        <strong>Fast</strong> turnarounds & transparent pricing
-      </div>
-    </div>
-  </div>
-</section>
 
-    <!-- SERVICES -->
-    <section id="services">
+      <aside class="hero-card" aria-label="Quick package offer">
+        <h3>Starter Package</h3>
+        <div class="price">UGX 75,000</div>
+        <p class="muted">Logo + 1-page site</p>
+        <a class="btn" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I'm%20interested%20in%20the%20Starter%20Package" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h3 class="section-title">About Nelly</h3>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I’m Nelly — a web & graphics designer based in Kampala. I lost part of my hearing while studying, and that sharpened how I see design. I build visual systems that help businesses and students get noticed and trusted online.</p>
+          <p class="muted">I focus on fast delivery, clear communication, and real outcomes: more leads, better professional presence, and confident clients.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <strong>5+</strong> student brands launched
+          </div>
+          <div class="stat-item">
+            <strong>10+</strong> local businesses improved
+          </div>
+          <div class="stat-item">
+            <strong>Fast</strong> turnarounds & transparent pricing
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES placeholder -->
+    <section id="services" aria-label="Services offered" style="display:none;">
       <h3 class="section-title">Services</h3>
-      <div class="services-grid">
-        <div class="service">
-          <h4>Brand Identity</h4>
-          <p>Create a clean logo, color palette, and typography system that works across print and digital.</p>
-        </div>
-        <div class="service">
-          <h4>Web Design</h4>
-          <p>Fast, mobile-first HTML/CSS websites you can host on GitHub Pages. Optimized for speed and clarity.</p>
-        </div>
-        <div class="service">
-          <h4>Social & Print Design</h4>
-          <p>Flyers, posters, Instagram templates, and WhatsApp banners for events and promotions.</p>
-        </div>
-        <div class="service">
-          <h4>Workshops & Student Kits</h4>
-          <p>Short sessions and affordable brand kits for students starting side-hustles.</p>
-        </div>
-      </div>
+      <p>Coming soon — detailed info about what I offer.</p>
     </section>
 
     <!-- PORTFOLIO -->
     <section id="portfolio">
       <h3 class="section-title">Featured Work</h3>
       <div class="portfolio-grid" aria-live="polite">
-        <div class="portfolio-item"><img src="assets/portfolio1.jpg" alt="Logo and flyer example"></div>
-        <div class="portfolio-item"><img src="assets/portfolio2.jpg" alt="Website mockup"></div>
-        <div class="portfolio-item"><img src="assets/portfolio3.jpg" alt="Social templates"></div>
-        <div class="portfolio-item"><img src="assets/portfolio4.jpg" alt="Before and after design"></div>
+        <figure class="portfolio-item">
+          <img src="assets/portfolio1.jpg" alt="Logo and flyer example" loading="lazy" />
+          <figcaption>Logo & flyer design for local startup</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="assets/portfolio2.jpg" alt="Website mockup" loading="lazy" />
+          <figcaption>Mobile-friendly website for student group</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="assets/portfolio3.jpg" alt="Social templates" loading="lazy" />
+          <figcaption>Social media graphics & event templates</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="assets/portfolio4.jpg" alt="Before and after design" loading="lazy" />
+          <figcaption>Before & after branding refresh</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h3 class="section-title">Contact & Bookings</h3>
-      <div class="contact" role="region" aria-label="Contact section">
-        <div>
-          <p style="margin:0 0 8px">Ready to start? Message me on WhatsApp or send a quick note.</p>
-          <a class="whatsapp" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I%27d%20like%20to%20book%20a%20design%20service" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" style="flex:0 0 18px" aria-hidden="true">
-              <path d="M20.5 3.5c-4-4-10-4-14 0-2 2-3 4-3.5 6.5L2 21l11-1.5c2.6-.4 4.7-1.9 6.5-3.5 4-4 4-10 0-14z"/>
-            </svg>
-            WhatsApp: 0786 336 335
-          </a>
+    <!-- BLOG placeholder -->
+    <section id="blog" aria-label="Blog & News" style="display:none;">
+      <h3 class="section-title">Blog</h3>
+      <p>Coming soon — articles, tutorials, and updates.</p>
+    </section>
 
-          <div style="margin-top:12px" class="phones">
-            <div><strong>Email</strong>: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
-            <div><strong>Location</strong>: Kampala, Uganda</div>
-          </div>
-        </div>
+    <!-- TESTIMONIALS placeholder -->
+    <section id="testimonials" aria-label="Client Testimonials" style="display:none;">
+      <h3 class="section-title">Testimonials</h3>
+      <p>Coming soon — what clients say about working with me.</p>
+    </section>
 
-        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" style="display:flex;flex-direction:column;gap:10px">
-          <input name="name" type="text" placeholder="Your name" required>
-          <input name="email" type="email" placeholder="Your email" required>
-          <textarea name="message" rows="4" placeholder="Briefly describe your project"></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
+    <!-- FAQ placeholder -->
+    <section id="faq" aria-label="Frequently Asked Questions" style="display:none;">
+      <h3 class="section-title">FAQ</h3>
+      <p>Coming soon — answers to common questions.</p>
     </section>
 
   </main>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container">
+    <h3 class="section-title">Contact & Bookings</h3>
+    <div class="contact" role="region" aria-label="Contact section">
+      <div>
+        <p style="margin:0 0 8px">Ready to start? Message me on WhatsApp or send a quick note.</p>
+        <a class="whatsapp" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I%27d%20like%20to%20book%20a%20design%20service" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" style="flex:0 0 18px" aria-hidden="true">
+            <path d="M20.5 3.5c-4-4-10-4-14 0-2 2-3 4-3.5 6.5L2 21l11-1.5c2.6-.4 4.7-1.9 6.5-3.5 4-4 4-10 0-14z"/>
+          </svg>
+          WhatsApp: 0786 336 335
+        </a>
+
+        <div style="margin-top:12px" class="phones">
+          <div><strong>Email</strong>: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+          <div><strong>Location</strong>: Kampala, Uganda</div>
+        </div>
+      </div>
+
+      <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" style="display:flex;flex-direction:column;gap:10px">
+        <input name="name" type="text" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="Briefly describe your project"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
@@ -152,27 +170,29 @@
     </div>
   </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-// Toggle mobile nav menu
-document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('nav');
-  const toggleBtn = document.createElement('button');
-  toggleBtn.setAttribute('aria-expanded', 'false');
-  toggleBtn.setAttribute('aria-label', 'Toggle navigation menu');
-  toggleBtn.classList.add('nav-toggle');
-  toggleBtn.innerHTML = `<span></span><span></span><span></span>`; // Hamburger lines
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-  // Insert toggle button before nav
-  nav.parentNode.insertBefore(toggleBtn, nav);
+  <!-- Hamburger menu toggle JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('nav');
+      const toggleBtn = document.createElement('button');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.setAttribute('aria-label', 'Toggle navigation menu');
+      toggleBtn.classList.add('nav-toggle');
+      toggleBtn.innerHTML = `<span></span><span></span><span></span>`;
 
-  toggleBtn.addEventListener('click', () => {
-    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
-    toggleBtn.setAttribute('aria-expanded', !expanded);
-    nav.classList.toggle('nav-open');
-  });
-});
+      nav.parentNode.insertBefore(toggleBtn, nav);
+
+      toggleBtn.addEventListener('click', () => {
+        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+        toggleBtn.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('nav-open');
+      });
+    });
+  </script>
 
 </body>
 </html>
