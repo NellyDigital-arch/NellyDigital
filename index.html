@@ -1,73 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelly Digital - Vision Beyond Sound</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nelly Digital — Vision Beyond Sound</title>
+  <meta name="description" content="Nelly Digital — Graphics & web design for students, schools and startups in Kampala. Vision beyond sound." />                                                              
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nelly Digital — Vision Beyond Sound" />
+  <meta property="og:description" content="Graphics & web design for students, schools and startups in Kampala." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
+
+  <header>
+    <div class="container brand">
+      <div class="left">
+        <a class="logo" href="#">
+          <div class="mark" aria-hidden="true">ND</div>
+          <div>
             <h1>Nelly Digital</h1>
-            <p class="tagline">Vision Beyond Sound</p>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+            <div style="font-size:12px;color:rgba(255,255,255,0.9)">Vision Beyond Sound</div>
+          </div>
+        </a>
+      </div>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Design that Speaks Without Words</h2>
-            <p>Professional graphics & web design for businesses, schools, and students.</p>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Intro">
+      <div>
+        <div class="eyebrow">Graphics & Web for Students and Startups — Kampala</div>
+        <h2>Designs that speak louder than sound.</h2>
+        <p class="lead">I help schools, students and local businesses look professional online — logos, websites, social branding and print that convert.</p>
+
+        <div class="cta-group" role="group">
+          <a class="btn" href="#contact">Start your project</a>
+          <a class="btn secondary" href="#portfolio">View work</a>
         </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Quick package">
+        <h3>Starter Package</h3>
+        <div class="price">UGX 75,000</div>
+        <p style="color:var(--muted);margin-top:8px">Logo + 1-page site</p>
+        <a class="btn" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I'm%20interested%20in%20the%20Starter%20Package">Book on WhatsApp</a>
+      </aside>
     </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service">
-                    <h3>Graphics Design</h3>
-                    <p>Logos, posters, social media graphics, and more.</p>
-                </div>
-                <div class="service">
-                    <h3>Web Design</h3>
-                    <p>Clean, responsive websites that tell your brand’s story.</p>
-                </div>
-                <div class="service">
-                    <h3>Brand Identity</h3>
-                    <p>Complete rebranding services to transform your business image.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- ABOUT -->
     <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>
-                I lost part of my hearing during my mid-secondary school years, but it sharpened my vision and creativity.  
-                At Nelly Digital, we bring your ideas to life through powerful, impactful designs.
-            </p>
-        </div>
+      <div>
+        <h3 class="section-title">About Nelly</h3>
+        <p>I’m Nelly — a web & graphics designer based in Kampala. I lost part of my hearing while studying, and that sharpened how I see design. I build visual systems that help businesses and students get noticed and trusted online.</p>
+        <p style="margin-top:8px;color:var(--muted)">I focus on fast delivery, clear communication, and real outcomes: more leads, better professional presence, and confident clients.</p>
+      </div>
+      <div>
+        <div class="test"><strong>Quick wins:</strong><br> 5+ student brands launched • 10+ local businesses improved their presence</div>
+        <div class="test"><strong>Work style:</strong><br> Fast turnarounds • Transparent pricing • Simple upgrades</div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Phone: +256 786 336335 / 0750 360812</p>
-            <p>Email: nellydigital@example.com</p>
+    <!-- SERVICES -->
+    <section id="services">
+      <h3 class="section-title">Services</h3>
+      <div class="services-grid">
+        <div class="service">
+          <h4>Brand Identity</h4>
+          <p>Create a clean logo, color palette, and typography system that works across print and digital.</p>
         </div>
+        <div class="service">
+          <h4>Web Design</h4>
+          <p>Fast, mobile-first HTML/CSS websites you can host on GitHub Pages. Optimized for speed and clarity.</p>
+        </div>
+        <div class="service">
+          <h4>Social & Print Design</h4>
+          <p>Flyers, posters, Instagram templates, and WhatsApp banners for events and promotions.</p>
+        </div>
+        <div class="service">
+          <h4>Workshops & Student Kits</h4>
+          <p>Short sessions and affordable brand kits for students starting side-hustles.</p>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Nelly Digital. All rights reserved.</p>
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <h3 class="section-title">Featured Work</h3>
+      <div class="portfolio-grid" aria-live="polite">
+        <div class="portfolio-item"><img src="assets/portfolio1.jpg" alt="Logo and flyer example"></div>
+        <div class="portfolio-item"><img src="assets/portfolio2.jpg" alt="Website mockup"></div>
+        <div class="portfolio-item"><img src="assets/portfolio3.jpg" alt="Social templates"></div>
+        <div class="portfolio-item"><img src="assets/portfolio4.jpg" alt="Before and after design"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3 class="section-title">Contact & Bookings</h3>
+      <div class="contact" role="region" aria-label="Contact section">
+        <div>
+          <p style="margin:0 0 8px">Ready to start? Message me on WhatsApp or send a quick note.</p>
+
+          <a class="whatsapp" href="https://wa.me/256786336335?text=Hi%20Nelly,%20I%27d%20like%20to%20book%20a%20design%20service" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" style="flex:0 0 18px" aria-hidden="true">
+              <path d="M20.5 3.5c-4-4-10-4-14 0-2 2-3 4-3.5 6.5L2 21l11-1.5c2.6-.4 4.7-1.9 6.5-3.5 4-4 4-10 0-14z"/>
+            </svg>
+            WhatsApp: 0786 336 335
+          </a>
+
+          <div style="margin-top:12px" class="phones">
+            <div><strong>Email</strong>: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+            <div><strong>Location</strong>: Kampala, Uganda</div>
+          </div>
         </div>
-    </footer>
+
+        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" style="display:flex;flex-direction:column;gap:10px">
+          <input name="name" type="text" placeholder="Your name" required>
+          <input name="email" type="email" placeholder="Your email" required>
+          <textarea name="message" rows="4" placeholder="Briefly describe your project"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Nelly Digital — Vision Beyond Sound · <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
