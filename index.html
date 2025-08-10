@@ -149,6 +149,24 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+// Toggle mobile nav menu
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.createElement('button');
+  toggleBtn.setAttribute('aria-expanded', 'false');
+  toggleBtn.setAttribute('aria-label', 'Toggle navigation menu');
+  toggleBtn.classList.add('nav-toggle');
+  toggleBtn.innerHTML = `<span></span><span></span><span></span>`; // Hamburger lines
+
+  // Insert toggle button before nav
+  nav.parentNode.insertBefore(toggleBtn, nav);
+
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('nav-open');
+  });
+});
 
 </body>
 </html>
