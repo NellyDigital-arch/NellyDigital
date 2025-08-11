@@ -83,34 +83,42 @@ nav a:hover {
   background: rgba(139, 0, 0, 0.08);
 }
 
-/* Hero */
+/* Hero (Updated ICT Skilling–style) */
 .hero {
-  padding: 56px 0;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 32px;
+  padding: 90px 20px;
+  background: linear-gradient(to right, var(--brand-pink), #fff);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: var(--brand-pink);
+  gap: 18px;
 }
+
 .hero .eyebrow {
   color: var(--brand-red);
   font-weight: 600;
-  opacity: 0.95;
+  font-size: 16px;
 }
+
 .hero h2 {
-  font-size: 44px;
+  font-size: 48px;
   color: var(--brand-red);
-  margin: 12px 0 12px;
-  line-height: 1.05;
+  margin: 0;
+  max-width: 700px;
 }
+
 .hero p.lead {
   color: var(--muted);
-  max-width: 560px;
+  max-width: 640px;
+  font-size: 18px;
 }
+
 .cta-group {
-  margin-top: 20px;
+  margin-top: 26px;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
 }
 
 /* Buttons */
