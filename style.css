@@ -83,32 +83,51 @@ nav a:hover {
   background: rgba(139, 0, 0, 0.08);
 }
 
-/* Hero (Updated ICT Skilling–style) */
+/* Hero (Updated ICT Skilling–style with image) */
 .hero {
-  padding: 90px 20px;
-  background: linear-gradient(to right, var(--brand-pink), #fff);
+  position: relative;
+  padding: 100px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  color: #fff;
+  overflow: hidden;
+  background: var(--brand-red);
+}
+
+/* Background image & overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(139, 0, 0, 0.6), rgba(139, 0, 0, 0.6)),
+    url('assets/hero-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+/* Ensure text stays above overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero .eyebrow {
-  color: var(--brand-red);
   font-weight: 600;
   font-size: 16px;
+  opacity: 0.95;
 }
 
 .hero h2 {
   font-size: 48px;
-  color: var(--brand-red);
   margin: 0;
   max-width: 700px;
+  line-height: 1.1;
 }
 
 .hero p.lead {
-  color: var(--muted);
   max-width: 640px;
   font-size: 18px;
 }
