@@ -170,25 +170,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Hamburger menu toggle JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const nav = document.querySelector('nav');
-      const toggleBtn = document.createElement('button');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      toggleBtn.setAttribute('aria-label', 'Toggle navigation menu');
-      toggleBtn.classList.add('nav-toggle');
-      toggleBtn.innerHTML = `<span></span><span></span><span></span>`;
-
-      nav.parentNode.insertBefore(toggleBtn, nav);
-
-      toggleBtn.addEventListener('click', () => {
-        const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
-        toggleBtn.setAttribute('aria-expanded', !expanded);
-        nav.classList.toggle('nav-open');
-      });
-    });
-  </script>
+ 
 <script>
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
