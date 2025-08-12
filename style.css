@@ -661,3 +661,24 @@ nav a:hover {
     color: #b30000;
   }
 }
+.brand {
+  padding: 12px 24px; /* add some left & right padding */
+  justify-content: flex-start; /* align items from left, not spaced */
+  gap: 48px; /* space between logo and nav */
+}
+.nav-toggle {
+  display: none;  /* hide hamburger on desktop */
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* show only on mobile */
+  }
+}
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-menu {
+  margin-left: auto; /* pushes nav links to the right */
+}
