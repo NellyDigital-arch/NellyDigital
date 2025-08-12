@@ -274,3 +274,9 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+.brand {
+  padding-left: 40px; /* Increase this value to move logo right */
+  padding-right: 24px;
+  justify-content: flex-start; /* keeps items aligned left */
+  gap: 48px;
+}
