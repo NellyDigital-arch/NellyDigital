@@ -597,3 +597,67 @@ nav a:hover {
   font-size: 18px;
   line-height: 1.5;
 }
+/* Hamburger toggle button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--brand-red);
+  z-index: 3000;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: white;
+    flex-direction: column;
+    padding: 60px 30px 30px;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 2500;
+    overflow-y: auto;
+  }
+
+  .nav-menu.show {
+    transform: translateX(0);
+  }
+
+  /* Close button inside the nav menu */
+  .nav-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--brand-red);
+    z-index: 3001;
+  }
+
+  /* Style nav links */
+  .nav-menu a {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brand-red);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-menu a:last-child {
+    border-bottom: none;
+  }
+  .nav-menu a:hover,
+  .nav-menu a:focus {
+    color: #b30000;
+  }
+}
