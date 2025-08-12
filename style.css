@@ -47,16 +47,11 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 48px; /* This controls the space between the logo and navigation */
-  padding: 12px 24px;
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  justify-content: flex-start;
+  padding-left: 40px; /* Move logo right from the corner */
+  padding-right: 24px;
+  gap: 48px; /* space between logo and nav */
 }
-
 
 /* Logo */
 .logo {
@@ -130,6 +125,7 @@ header {
     flex-wrap: wrap;
     padding: 12px 16px;
     gap: 20px;
+    padding-left: 24px; /* reduce padding on mobile */
   }
 
   /* Show hamburger on mobile */
@@ -271,9 +267,6 @@ h3.section-title {
   margin: 0 0 20px;
 }
 
-/* Other sections (About, Portfolio, Contact) kept as you had them */
-/* ... (You can keep your other styles as-is) */
-
 /* Footer */
 footer {
   padding: 28px 0;
@@ -281,12 +274,3 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-.brand {
-  padding-left: 40px; /* Increase this value to move logo right */
-  padding-right: 24px;
-  justify-content: flex-start; /* keeps items aligned left */
-  gap: 48px;
-}
-
-
-
