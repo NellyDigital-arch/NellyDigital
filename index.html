@@ -34,7 +34,7 @@
     &#9776;
   </button>
 
-  <nav aria-label="Main navigation" class="nav-menu">
+    <nav aria-label="Main navigation" class="nav-menu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -43,14 +43,8 @@
     <a href="#blog">Blog</a>
     <a href="#testimonials">Testimonials</a>
     <a href="#faq">FAQ</a>
-    <nav aria-label="Main navigation" class="nav-menu">
-  <button class="nav-close" aria-label="Close menu">&times;</button>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <!-- rest of links -->
 </nav>
 
-  </nav>
 </header>
 
   
@@ -179,13 +173,29 @@
 <script>
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
+  const navClose = document.querySelector('.nav-close');
 
   navToggle.addEventListener('click', () => {
-    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !isExpanded);
-    navMenu.classList.toggle('show');
+    navMenu.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    navToggle.setAttribute('aria-expanded', 'true');
+  });
+
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show');
+    document.body.style.overflow = '';
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+      document.body.style.overflow = '';
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 </script>
 
+  
 </body>
 </html>
