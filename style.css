@@ -62,9 +62,31 @@ header {
 }
 
 .logo-img {
-  width: 46px;
-  height: auto;
+  width: 120px;      /* Default desktop size */
+  max-width: 100%;   /* Prevent overflow */
+  height: auto;      /* Keep aspect ratio */
+  display: block;    /* Remove inline gaps */
 }
+
+@media (max-width: 1024px) {
+  .logo-img {
+    width: 100px;    /* Medium tablets and smaller laptops */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 80px;     /* Mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    width: 70px;     /* Small phones */
+  }
+}
+
+
 
 /* Navigation styles */
 .nav-menu {
