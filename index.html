@@ -168,11 +168,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
- <script>
+<script>
   // Update footer year dynamically
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -183,71 +179,22 @@
 
   navToggle.addEventListener('click', () => {
     navMenu.classList.add('show');
-    document.body.style.overflow = 'hidden';  // Prevent background scroll
     navToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';  // Prevent background scroll
   });
 
   navClose.addEventListener('click', () => {
     navMenu.classList.remove('show');
-    document.body.style.overflow = '';
     navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = ''; // Restore scroll
   });
 
   // Close nav when clicking any link inside the menu
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.class
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuClose = document.querySelector('.menu-close');
-  const navMenu = document.querySelector('.nav-menu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.add('active');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
-  });
-
-  menuClose.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = ''; // Re-enable scroll
-  });
-
-  // Close menu when clicking a nav link (optional, for better UX)
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-</script>
-<script>
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const navClose = document.querySelector('.nav-close');
-
-  // Open menu
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.add('show');
-    navToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
-  });
-
-  // Close menu
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show');
-    navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = ''; // restore scroll
-  });
-
-  // Close menu when clicking any link inside nav
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('show');
       navToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      document.body.style.overflow = ''; // Restore scroll
     });
   });
 </script>
