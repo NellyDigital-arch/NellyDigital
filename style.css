@@ -47,6 +47,13 @@ header {
   gap: 48px;                /* space between logo and nav */
   /* padding and other styles stay */
 }
+header.brand {
+  position: sticky;
+  top: 0;
+  background-color: white; /* or your header bg */
+  z-index: 1000;           /* above other content */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+}
 
 /* rest stays the same */
 
