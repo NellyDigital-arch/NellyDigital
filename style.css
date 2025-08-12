@@ -1,5 +1,5 @@
 :root {
-  --brand-red: #8b0000; /* Original deep red */
+  --brand-red: #8b0000;
   --brand-pink: #f5dcdc;
   --bg: #ffffff;
   --muted: #666666;
@@ -13,15 +13,13 @@
 }
 html, body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #111;
   background: var(--bg);
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.45;
 }
 
 /* Layout */
@@ -31,33 +29,33 @@ body {
   padding: 0 20px;
 }
 
-/* Header & Nav */
+/* Header */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: var(--bg);
   color: var(--dark-charcoal);
-  padding: 12px 24px;
   border-bottom: 2px solid var(--brand-red);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
+/* Brand - flex container for logo + nav + hamburger */
 .brand {
+  max-width: var(--max-width);
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 40px; /* Move logo right from the corner */
-  padding-right: 24px;
-  gap: 48px; /* space between logo and nav */
+  justify-content: flex-start; /* left align */
+  padding: 12px 40px 12px 40px; /* move logo right with left padding */
+  gap: 48px;
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
   color: inherit;
 }
@@ -69,7 +67,6 @@ header {
   display: block;
 }
 
-/* Responsive logo sizes */
 @media (max-width: 1024px) {
   .logo-img {
     width: 100px;
@@ -86,7 +83,7 @@ header {
   }
 }
 
-/* Navigation menu - desktop */
+/* Navigation Menu - desktop */
 .nav-menu {
   display: flex;
   gap: 24px;
@@ -108,9 +105,9 @@ header {
   outline: none;
 }
 
-/* Hamburger toggle button */
+/* Hamburger toggle button - hidden on desktop */
 .nav-toggle {
-  display: none; /* hidden on desktop */
+  display: none;
   background: none;
   border: none;
   font-size: 32px;
@@ -119,21 +116,21 @@ header {
   z-index: 3000;
 }
 
-/* Responsive: mobile */
+/* Mobile styles */
 @media (max-width: 768px) {
   .brand {
-    flex-wrap: wrap;
-    padding: 12px 16px;
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 20px;
-    padding-left: 24px; /* reduce padding on mobile */
+    flex-wrap: wrap;
   }
 
-  /* Show hamburger on mobile */
+  /* Hamburger visible on mobile */
   .nav-toggle {
     display: block;
   }
 
-  /* Mobile nav menu styles */
+  /* Hide nav-menu initially */
   .nav-menu {
     display: none;
     position: fixed;
@@ -148,13 +145,13 @@ header {
     overflow-y: auto;
   }
 
-  /* Show mobile nav when active */
+  /* Show nav-menu when toggled */
   .nav-menu.show {
     display: flex;
     transform: translateX(0);
   }
 
-  /* Close button inside mobile nav */
+  /* Close button inside nav */
   .nav-close {
     position: absolute;
     top: 16px;
@@ -185,7 +182,7 @@ header {
   }
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   padding: 100px 20px;
