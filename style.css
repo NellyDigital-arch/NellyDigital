@@ -358,3 +358,66 @@ footer {
   .contact { grid-template-columns: 1fr; }
   nav { display: none; }
 }
+.container.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: #fff; /* white background */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: var(--brand-red, #e63946);
+  outline: none;
+}
+
+.nav-toggle {
+  display: none; /* shown only on mobile */
+}
+
+@media (max-width: 768px) {
+  .container.brand {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 12px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+  }
+}
+
