@@ -25,28 +25,26 @@
 
 <body>
 
-<header class="brand">
-  <div class="left">
+<header>
+  <div class="brand">
     <a href="#home" class="logo" aria-label="Nelly Digital Home">
       <img src="assets/nelly-digital-logo.svg" alt="Nelly Digital Logo" class="logo-img" />
     </a>
+
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+
+    <nav aria-label="Main navigation" class="nav-menu" role="navigation">
+      <button class="menu-close" aria-label="Close navigation menu">&times;</button>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <a href="#blog">Blog</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+    </nav>
   </div>
-
-  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-    &#9776;
-  </button>
-
-  <nav aria-label="Main navigation" class="nav-menu">
-    <button class="nav-close" aria-label="Close menu">&times;</button>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-    <a href="#blog">Blog</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#faq">FAQ</a>
-  </nav>
 </header>
 
   
@@ -196,6 +194,32 @@
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.class
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuClose = document.querySelector('.menu-close');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.add('active');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  });
+
+  menuClose.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = ''; // Re-enable scroll
+  });
+
+  // Close menu when clicking a nav link (optional, for better UX)
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 
   
