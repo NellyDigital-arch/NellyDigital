@@ -169,15 +169,18 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
- 
-<script>
+ <script>
+  // Update footer year dynamically
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav toggle and close functionality
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const navClose = document.querySelector('.nav-close');
 
   navToggle.addEventListener('click', () => {
     navMenu.classList.add('show');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';  // Prevent background scroll
     navToggle.setAttribute('aria-expanded', 'true');
   });
 
@@ -187,14 +190,11 @@
     navToggle.setAttribute('aria-expanded', 'false');
   });
 
+  // Close nav when clicking any link inside the menu
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('show');
-      document.body.style.overflow = '';
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+      navMenu.class
+
 
   
 </body>
