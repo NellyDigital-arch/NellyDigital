@@ -280,3 +280,9 @@ footer {
   justify-content: flex-start; /* keeps items aligned left */
   gap: 48px;
 }
+.brand {
+  align-items: center; /* Ensures vertical centering */
+}
+
+
+
