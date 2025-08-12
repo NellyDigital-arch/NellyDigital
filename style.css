@@ -434,3 +434,131 @@ footer {
     color: #333;
   }
 }
+/* ================================
+   Global Styles
+================================ */
+:root {
+  --brand-red: #8b0000; /* Original deep red */
+  --brand-dark: #222;
+  --brand-light: #fff;
+  --brand-gray: #f5f5f5;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--brand-dark);
+  background-color: var(--brand-light);
+}
+
+/* ================================
+   Header / Navbar
+================================ */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--brand-light);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--brand-dark);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--brand-red);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================================
+   Hero Section
+================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--brand-light);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(139, 0, 0, 0.6), rgba(139, 0, 0, 0.6)),
+    url('assets/hero-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ================================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--brand-light);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
