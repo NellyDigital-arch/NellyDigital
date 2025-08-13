@@ -515,3 +515,15 @@ footer {
     url('assets/hero-bg.jpg') center/cover no-repeat;
   z-index: 0;
 }
+/* -----------------------------
+   OVERRIDE: Navbar hover text color
+   ----------------------------- */
+.nav-menu a {
+  color: #8b0000; /* Default red color */
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: #ffffff !important; /* White color on hover */
+}
