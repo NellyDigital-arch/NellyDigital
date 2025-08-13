@@ -486,3 +486,20 @@ footer {
     transform: scale(1.08);      /* slightly enlarge the link */
   }
 }
+/* -----------------------------
+   OVERRIDE: Desktop nav spacing for scale-up links
+   ----------------------------- */
+@media (min-width: 769px) {
+  .nav-menu a {
+    padding: 6px 14px;          /* slightly more horizontal padding */
+    margin: 0 4px;              /* minimal horizontal margin to prevent collisions */
+    border-radius: 6px;
+    display: inline-block;       /* ensures transform works */
+    transition: all 0.3s ease;  /* smooth transition for hover effects */
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a:focus {
+    transform: scale(1.08);      /* keep the subtle scale-up */
+  }
+}
