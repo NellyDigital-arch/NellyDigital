@@ -259,3 +259,16 @@ footer {
     display: none !important;
   }
 }
+/* Desktop: Center logo and nav menu together */
+@media (min-width: 769px) {
+  .brand {
+    justify-content: center; /* Center all child elements */
+    gap: 48px; /* Space between logo and menu */
+  }
+
+  /* Optional: limit width so it doesn't look stretched */
+  header .container {
+    display: flex;
+    justify-content: center;
+  }
+}
