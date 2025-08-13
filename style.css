@@ -272,3 +272,49 @@ footer {
     justify-content: center;
   }
 }
+/* Hide desktop sections on mobile and vice versa */
+.desktop-only { display: none; }
+.mobile-only { display: block; }
+
+@media (min-width: 769px) {
+  .desktop-only { display: flex; }
+  .mobile-only { display: none; }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 12px 40px;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-left {
+    margin-right: auto;
+  }
+
+  .nav-right {
+    margin-left: auto;
+  }
+
+  /* Desktop link styling (inherits your current styles) */
+  .nav-left a,
+  .nav-right a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-left a:hover,
+  .nav-right a:hover {
+    color: var(--brand-red);
+  }
+}
