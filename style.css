@@ -854,3 +854,51 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Contact & Booking Inputs and Buttons Branding */
+.contact-section input,
+.contact-section textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 8px rgba(139, 0, 0, 0.2);
+  outline: none;
+}
+
+.contact-section .btn {
+  background: var(--brand-red);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-section .btn:hover {
+  background: #a80000;
+  transform: translateY(-2px);
+}
+
+/* Contact Links */
+.contact-item a {
+  color: var(--brand-red);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #fff;
+  background: var(--brand-red);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
