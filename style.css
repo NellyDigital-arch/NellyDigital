@@ -705,3 +705,20 @@ footer {
     max-width: 90%;
   }
 }
+/* -----------------------------
+   OVERRIDE: Services grid alignment for 6 items
+   ----------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center; /* centers each card horizontally */
+  align-items: stretch;  /* ensures all cards have equal height */
+}
+
+/* Optional: keep consistent card height */
+.service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
