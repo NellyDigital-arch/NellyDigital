@@ -362,6 +362,17 @@
     <path d="M12 2C6.48 2 2 6.48 2 12c0 2.21.72 4.25 1.93 5.92L2 22l4.09-1.93C7.75 21.28 9.79 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm-.5 14h-1v-6h1v6zm0-8h-1V7h1v1z"/>
   </svg>
 </a>
+<script>
+  const floatingBtn = document.querySelector('.floating-booking-btn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // show after scrolling 300px
+      floatingBtn.classList.add('show');
+    } else {
+      floatingBtn.classList.remove('show');
+    }
+  });
+</script>
 
   
 </body>
