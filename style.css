@@ -41,15 +41,16 @@ header {
   z-index: 1000;
 }
 
-/* Brand - flex container for logo + nav + hamburger */
+/* Brand - centered layout */
 .brand {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* left align */
-  padding: 12px 40px 12px 40px; /* move logo right with left padding */
+  justify-content: center; /* Center content horizontally */
+  padding: 12px 40px;
   gap: 48px;
+  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -62,25 +63,18 @@ header {
 
 .logo-img {
   width: 120px;
-  max-width: 100%;
   height: auto;
   display: block;
 }
 
 @media (max-width: 1024px) {
-  .logo-img {
-    width: 100px;
-  }
+  .logo-img { width: 100px; }
 }
 @media (max-width: 768px) {
-  .logo-img {
-    width: 80px;
-  }
+  .logo-img { width: 80px; }
 }
 @media (max-width: 480px) {
-  .logo-img {
-    width: 70px;
-  }
+  .logo-img { width: 70px; }
 }
 
 /* Navigation Menu - desktop */
@@ -88,7 +82,6 @@ header {
   display: flex;
   gap: 24px;
   align-items: center;
-  margin-left: auto; /* pushes nav to right */
 }
 
 .nav-menu a {
@@ -119,18 +112,15 @@ header {
 /* Mobile styles */
 @media (max-width: 768px) {
   .brand {
+    flex-direction: row;
+    justify-content: space-between;
     padding-left: 24px;
     padding-right: 24px;
     gap: 20px;
-    flex-wrap: wrap;
   }
 
-  /* Hamburger visible on mobile */
-  .nav-toggle {
-    display: block;
-  }
+  .nav-toggle { display: block; }
 
-  /* Hide nav-menu initially */
   .nav-menu {
     display: none;
     position: fixed;
@@ -145,13 +135,11 @@ header {
     overflow-y: auto;
   }
 
-  /* Show nav-menu when toggled */
   .nav-menu.show {
     display: flex;
     transform: translateX(0);
   }
 
-  /* Close button inside nav */
   .nav-close {
     position: absolute;
     top: 16px;
@@ -164,18 +152,14 @@ header {
     z-index: 3001;
   }
 
-  /* Mobile nav links */
   .nav-menu a {
     font-size: 20px;
     font-weight: 600;
     color: var(--brand-red);
-    text-decoration: none;
     padding: 12px 0;
     border-bottom: 1px solid #eee;
   }
-  .nav-menu a:last-child {
-    border-bottom: none;
-  }
+  .nav-menu a:last-child { border-bottom: none; }
   .nav-menu a:hover,
   .nav-menu a:focus {
     color: #b30000;
@@ -215,7 +199,7 @@ header {
 
 .hero h2 {
   font-size: 48px;
-  margin: 0;
+  margin: 0 auto;
   max-width: 700px;
   line-height: 1.1;
 }
@@ -223,6 +207,7 @@ header {
 .hero p.lead {
   max-width: 640px;
   font-size: 18px;
+  margin: 0 auto;
 }
 
 .cta-group {
@@ -244,9 +229,7 @@ header {
   border: none;
   cursor: pointer;
 }
-.btn:hover {
-  background: #a80000;
-}
+.btn:hover { background: #a80000; }
 .btn.secondary {
   background: transparent;
   border: 2px solid var(--brand-red);
@@ -270,52 +253,4 @@ footer {
   color: var(--muted);
   text-align: center;
   font-size: 14px;
-}
-/* --- Centered logo & nav, shrink on scroll --- */
-.brand {
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  transition: padding 0.3s ease, background-color 0.3s ease;
-}
-
-/* Keep nav centered with logo */
-.nav-menu {
-  margin-left: 0;
-}
-
-/* Shrink effect */
-header.shrink .brand {
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-header.shrink .logo-img {
-  width: 90px;
-}
-
-@media (max-width: 768px) {
-  header.shrink .logo-img {
-    width: 70px;
-  }
-}
-/* --- Fade & Slide Animations --- */
-.fade-slide {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 0.8s ease forwards;
-}
-
-.fade-slide-delay {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeSlideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
