@@ -304,3 +304,36 @@ footer {
     display: none !important;
   }
 }
+/* Desktop: Full-width navbar and adjusted logo spacing */
+@media (min-width: 769px) {
+  /* Make header span full width */
+  header.brand {
+    width: 100%;
+    padding: 12px 60px; /* add more padding left/right for breathing room */
+    background: var(--bg); /* ensures full-width background */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center logo + nav as a group */
+    gap: 32px; /* smaller gap so logo is closer to home link */
+  }
+
+  /* Nav menu inline for desktop */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 24px;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+  }
+
+  /* Push logo slightly toward left/home link */
+  .brand .left {
+    margin-right: -20px; /* negative margin moves logo closer to nav */
+  }
+
+  /* Hide mobile-only buttons on desktop */
+  .nav-close { display: none !important; }
+  .nav-toggle { display: none !important; }
+}
