@@ -271,3 +271,31 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+/* --- Centered logo & nav, shrink on scroll --- */
+.brand {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+/* Keep nav centered with logo */
+.nav-menu {
+  margin-left: 0;
+}
+
+/* Shrink effect */
+header.shrink .brand {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+header.shrink .logo-img {
+  width: 90px;
+}
+
+@media (max-width: 768px) {
+  header.shrink .logo-img {
+    width: 70px;
+  }
+}
