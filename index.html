@@ -307,10 +307,12 @@
   </svg>
 </button>
 
+<script>
+  const backToTopBtn = document.getElementById('back-to-top');
 
   // Show button when scrolling down
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) { // show after 400px scroll
+    if (window.scrollY > 400) {
       backToTopBtn.style.display = 'flex';
     } else {
       backToTopBtn.style.display = 'none';
