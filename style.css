@@ -472,3 +472,17 @@ footer {
     text-decoration: none;
   }
 }
+/* -----------------------------
+   OVERRIDE: Desktop nav hover - subtle scale-up effect
+   ----------------------------- */
+@media (min-width: 769px) {
+  .nav-menu a {
+    display: inline-block;       /* ensures transform works smoothly */
+    transition: all 0.3s ease;   /* smooth transition for color, bg, scale */
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a:focus {
+    transform: scale(1.08);      /* slightly enlarge the link */
+  }
+}
