@@ -272,3 +272,35 @@ footer {
     justify-content: center;
   }
 }
+/* Desktop: Center logo and nav as one block */
+@media (min-width: 769px) {
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center logo + nav together */
+    gap: 48px; /* Space between logo and nav */
+    padding: 12px 40px;
+  }
+
+  /* Ensure nav menu is visible and inline on desktop */
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 24px;
+    background: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+  }
+
+  /* Hide close button on desktop */
+  .nav-close {
+    display: none !important;
+  }
+
+  /* Hide hamburger menu on desktop */
+  .nav-toggle {
+    display: none !important;
+  }
+}
