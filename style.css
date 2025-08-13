@@ -722,3 +722,20 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
 }
+/* -----------------------------
+   OVERRIDE: Portfolio grid alignment for all Featured Work items
+   ----------------------------- */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;          /* allows items to move to next row if needed */
+  justify-content: center;  /* centers all items horizontally */
+  gap: 30px;                /* spacing between cards */
+  align-items: stretch;     /* makes all cards equal height */
+}
+
+.portfolio-item {
+  max-width: 260px;         /* keeps uniform card width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
