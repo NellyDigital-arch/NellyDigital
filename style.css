@@ -378,3 +378,63 @@ footer {
   .nav-close { display: none !important; }
   .nav-toggle { display: none !important; }
 }
+/* -----------------------------
+   OVERRIDE: Desktop navbar tweaks + hover effect
+   ----------------------------- */
+@media (min-width: 769px) {
+  /* Full-width header background */
+  header.brand {
+    width: 100% !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    gap: 24px !important; /* tighter spacing between logo + nav */
+    background: var(--bg) !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+
+  /* Nav menu inline for desktop */
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px !important;
+    background: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* Pull logo slightly toward Home link */
+  .brand .left {
+    margin-right: -8px !important;
+  }
+
+  /* Slightly scale logo on desktop */
+  .brand .logo-img {
+    width: 130px !important;
+    height: auto !important;
+  }
+
+  /* Hide mobile-only elements on desktop */
+  .nav-close { display: none !important; }
+  .nav-toggle { display: none !important; }
+
+  /* Desktop nav links gradient hover */
+  .nav-menu a {
+    position: relative;
+    background: linear-gradient(90deg, #8b0000, #b30000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #333;
+    transition: all 0.4s ease;
+  }
+
+  .nav-menu a:hover {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #b30000, #8b0000);
+  }
+}
+
