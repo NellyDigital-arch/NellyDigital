@@ -576,3 +576,19 @@ footer {
     text-align: center;
   }
 }
+#services {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+#services .section-title {
+  font-size: 32px;
+  color: var(--brand-red);
+  margin-bottom: 20px;
+}
+
+#services p {
+  font-size: 18px;
+  color: var(--dark-charcoal);
+}
