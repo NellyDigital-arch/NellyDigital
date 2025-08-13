@@ -438,3 +438,19 @@ footer {
   }
 }
 
+/* -----------------------------
+   OVERRIDE: Desktop nav hover - red to white
+   ----------------------------- */
+@media (min-width: 769px) {
+  /* Nav links normal color */
+  .nav-menu a {
+    color: var(--brand-red);
+    transition: color 0.3s ease;
+  }
+
+  /* On hover, text turns white */
+  .nav-menu a:hover,
+  .nav-menu a:focus {
+    color: #ffffff;
+  }
+}
