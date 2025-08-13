@@ -902,3 +902,38 @@ footer {
   padding: 2px 6px;
   border-radius: 4px;
 }
+/* Floating WhatsApp Button - Bottom Left */
+.floating-booking-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px; /* moved to left */
+  background: #25D366; /* WhatsApp green */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 3000;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.floating-booking-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-booking-btn:hover {
+  background: #1ebe57; /* slightly darker green on hover */
+  transform: translateY(-3px);
+}
+
+.floating-booking-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
