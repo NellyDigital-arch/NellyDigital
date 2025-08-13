@@ -1171,3 +1171,14 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Scroll Reveal Animation */
+.scroll-reveal {
+  opacity: 0;                  /* hidden initially */
+  transform: translateY(40px); /* move slightly down */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.active {
+  opacity: 1;                  /* visible when active */
+  transform: translateY(0);    /* move to natural position */
+}
