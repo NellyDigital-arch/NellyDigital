@@ -503,3 +503,15 @@ footer {
     transform: scale(1.08);      /* keep the subtle scale-up */
   }
 }
+/* -----------------------------
+   OVERRIDE: Hero overlay lighter and more lively
+   ----------------------------- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 80, 80, 0.25), rgba(255, 80, 80, 0.25)), /* lighter overlay */
+    url('assets/hero-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
