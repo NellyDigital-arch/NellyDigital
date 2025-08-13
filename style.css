@@ -937,3 +937,62 @@ footer {
   height: 28px;
   fill: #fff;
 }
+/* WhatsApp Floating Button Tooltip */
+.floating-booking-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 3000;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Tooltip text */
+.floating-booking-btn::after {
+  content: "WhatsApp";
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #25D366;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.floating-booking-btn:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(5px);
+}
+
+.floating-booking-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.floating-booking-btn:hover {
+  background: #1ebe57;
+  transform: translateY(-3px);
+}
+
+.floating-booking-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
