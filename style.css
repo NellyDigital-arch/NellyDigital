@@ -454,3 +454,21 @@ footer {
     color: #ffffff;
   }
 }
+/* -----------------------------
+   OVERRIDE: Desktop nav hover - white text + subtle background
+   ----------------------------- */
+@media (min-width: 769px) {
+  .nav-menu a {
+    color: var(--brand-red);
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a:focus {
+    color: #ffffff;
+    background-color: #b30000; /* slightly darker red */
+    text-decoration: none;
+  }
+}
