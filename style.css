@@ -1,3 +1,20 @@
+/* Hero section tech background */
+.hero {
+  position: relative;
+  background: url('assets/tech-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 :root {
   --brand-red: #8b0000;
   --brand-pink: #f5dcdc;
@@ -1321,5 +1338,22 @@ background: url('assets/nelly-digital-logo.svg') ...
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+/* Hero section tech background */
+.hero {
+  position: relative;
+  background: url('assets/tech-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+.hero > * {
+  position: relative;
   z-index: 1;
 }
