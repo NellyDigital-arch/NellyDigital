@@ -1357,3 +1357,27 @@ background: url('assets/nelly-digital-logo.svg') ...
   position: relative;
   z-index: 1;
 }
+/* Hero section tech background */
+.hero {
+  position: relative;
+  background: url('assets/tech-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  min-height: 90vh;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+  z-index: 0;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+.footer {
+  background: url('assets/logo-watermark.png') center/contain no-repeat;
+  background-color: #111; /* base footer color */
+  padding: 40px 20px;
+  color: white;
+}
