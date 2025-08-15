@@ -1283,3 +1283,43 @@ footer {
   100% { opacity: 0.07; transform: scale(1); }
 }
 background: url('assets/nelly-digital-logo.svg') ...
+/* Footer with pulsing logo background */
+.footer {
+  background: url('assets/nelly-digital-logo.svg') center/contain no-repeat,
+              linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+  color: #fff;
+  padding: 2rem 0;
+  position: relative;
+  animation: pulseBackground 12s infinite ease-in-out;
+}
+
+.footer .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--brand-red);
+}
+
+/* Subtle pulse animation for background logo */
+@keyframes pulseBackground {
+  0%, 100% { background-size: 90%, cover; }
+  50% { background-size: 100%, cover; }
+}
+
+/* Dark overlay for better readability */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
