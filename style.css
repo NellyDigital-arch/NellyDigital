@@ -1381,3 +1381,23 @@ background: url('assets/nelly-digital-logo.svg') ...
   padding: 40px 20px;
   color: white;
 }
+footer {
+  position: relative;
+  background: url('assets/logo-watermark.jpg') center/contain no-repeat;
+  background-color: #111; /* fallback color */
+  padding: 40px 20px;
+  color: white;
+}
+
+footer .container {
+  position: relative;
+  z-index: 2; /* keep text above the background logo */
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.7); /* darken background for text visibility */
+  z-index: 1;
+}
