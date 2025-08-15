@@ -1401,3 +1401,23 @@ footer::before {
   background: rgba(17, 17, 17, 0.7); /* darken background for text visibility */
   z-index: 1;
 }
+footer {
+  position: relative;
+  background: url('assets/logo-watermark.jpg') center/contain no-repeat;
+  background-color: #111;
+  padding: 40px 20px;
+  color: white;
+}
+
+footer .container {
+  position: relative;
+  z-index: 2;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.7);
+  z-index: 1;
+}
