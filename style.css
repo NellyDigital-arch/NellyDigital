@@ -1182,3 +1182,69 @@ footer {
   opacity: 1;                  /* visible when active */
   transform: translateY(0);    /* move to natural position */
 }
+/* === Tech Background Sections === */
+.tech-bg {
+  background-image: url('assets/tech-pattern.jpg'); /* Change to your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax feel */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tech-bg .content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5); /* Slight dark overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* === Video Section === */
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.video-section .overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* === Footer Watermark === */
+.footer {
+  position: relative;
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer::before {
+  content: "";
+  background: url('assets/nelly-digital-logo.svg') no-repeat center;
+  background-size: 40%;
+  opacity: 0.05; /* Faint watermark */
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.footer .content {
+  position: relative;
+  z-index: 1;
+}
