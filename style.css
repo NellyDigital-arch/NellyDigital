@@ -1518,3 +1518,12 @@ footer::before {
   position: relative;
   z-index: 1;
 }
+/* Ensure proper vertical scrolling and hero interaction */
+body, html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+header.hero {
+  height: auto; /* Ensure hero section doesn't block scrolling */
+}
