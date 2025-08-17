@@ -348,6 +348,52 @@
   </div>
 </section>
 
+  <section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Let's Get in Touch</h2>
+    <p class="section-subtitle">Fill in the form or use the contact info below</p>
+
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <label for="name">Your Name*</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Your Email*</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="service">Service Needed*</label>
+        <input type="text" id="service" name="service" placeholder="Service Needed" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn">Send Message Now</button>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-item">
+          <strong>Phone Number:</strong>
+          <p>0786 336 335</p>
+        </div>
+        <div class="info-item">
+          <strong>Email Address:</strong>
+          <p>nellydigital401@gmail.com</p>
+        </div>
+        <div class="info-item">
+          <strong>Street Address:</strong>
+          <p>Wandegeya, Kampala</p>
+        </div>
+        <div class="info-item">
+          <strong>Website:</strong>
+          <p>www.nelly.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="content">
     © <span id="year"></span> Nelly Digital — Vision Beyond Sound · 
@@ -479,6 +525,13 @@
   window.addEventListener('scroll', handleScrollAnimation);
   window.addEventListener('load', handleScrollAnimation); // animate on page load
 </script>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/256786336335?text=Hi%20Nelly%2C%20I%20want%20to%20know%20more%20about%20your%20services" 
+   target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <span class="whatsapp-icon">&#x1F4AC;</span> <!-- emoji placeholder for WhatsApp icon -->
+</a>
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to Top">&#8679;</button>
 
   
 </body>
