@@ -1719,3 +1719,83 @@ header.hero {
   position: relative;
   z-index: 1;
 }
+/* --- Navbar Logo Inline with Menu --- */
+header.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 12px 40px;
+  gap: 40px; /* Space between logo and menu */
+}
+
+.logo-img {
+  width: 140px; /* slightly bigger logo */
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+  .logo-img { width: 120px; }
+}
+
+@media (max-width: 768px) {
+  header.brand {
+    justify-content: space-between;
+    padding: 12px 24px;
+  }
+  .logo-img { width: 100px; }
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+  }
+  .nav-menu.show { display: flex; }
+}
+/* --- Navbar Logo Inline & Close to Home --- */
+header.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* left align everything */
+  padding: 12px 40px;
+  gap: 20px; /* smaller gap for logo closer to Home */
+}
+
+.logo-img {
+  width: 150px; /* slightly bigger for emphasis */
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Optional: slightly lift logo visually */
+.logo-img {
+  position: relative;
+  top: -2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .logo-img { width: 130px; }
+}
+
+@media (max-width: 768px) {
+  header.brand {
+    justify-content: space-between;
+    padding: 12px 24px;
+  }
+  .logo-img { width: 100px; }
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+  }
+  .nav-menu.show { display: flex; }
+}
