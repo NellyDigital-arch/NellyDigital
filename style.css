@@ -1799,3 +1799,50 @@ header.brand {
   }
   .nav-menu.show { display: flex; }
 }
+/* --- Navbar link hover effect --- */
+.nav-menu a {
+  position: relative;
+  color: var(--brand-red); /* default text color */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: #fff; /* text turns white on hover */
+  transform: translateY(-2px); /* subtle lift effect */
+}
+
+/* Optional: add subtle underline animation */
+.nav-menu a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+  width: 100%;
+}
+/* --- Navbar link gradient hover --- */
+.nav-menu a {
+  position: relative;
+  color: var(--brand-red); /* default text color */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: #fff; /* text turns white */
+  background: linear-gradient(90deg, #ff4d4d, #e60000); /* subtle red gradient */
+  transform: translateY(-2px);
+}
