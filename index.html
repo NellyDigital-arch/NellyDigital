@@ -532,6 +532,22 @@
 </a>
 <!-- Back to Top Button -->
 <button id="back-to-top" aria-label="Back to Top">&#8679;</button>
+<script>
+// Show button after scrolling down
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = 'flex';
+  } else {
+    backToTop.style.display = 'none';
+  }
+});
+
+// Scroll to top on click
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 
   
 </body>
