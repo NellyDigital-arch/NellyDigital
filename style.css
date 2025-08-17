@@ -1465,3 +1465,27 @@ footer::before {
   0%, 100% { background-size: 90%, cover; }
   50% { background-size: 100%, cover; }
 }
+.footer {
+  background: url('assets/logo-watermark.jpg') center/contain no-repeat,
+              linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+  color: #fff;
+  padding: 2rem 0;
+  position: relative;
+  animation: pulseBackground 12s infinite ease-in-out;
+}
+.footer .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+@keyframes pulseBackground {
+  0%, 100% { background-size: 90%, cover; }
+  50% { background-size: 100%, cover; }
+}
