@@ -1695,3 +1695,27 @@ header.hero {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.1);
 }
+/* --- Featured Work / Portfolio Section Tech Background --- */
+.portfolio-section {
+  position: relative;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Tech pattern overlay */
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: url('assets/tech-bg.jpg') center/cover no-repeat;
+  opacity: 0.08; /* subtle pattern */
+  z-index: 0;
+}
+
+/* Ensure content is above the overlay */
+.portfolio-section .container {
+  position: relative;
+  z-index: 1;
+}
