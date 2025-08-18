@@ -387,3 +387,37 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   margin: 0;
   font-size: 0.95rem;
 }
+
+
+/* Blog image with always-visible gradient overlay */
+.blog-image {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.blog-image .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+  color: #fff;
+  padding: 15px;
+  opacity: 1; /* always partially visible */
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.blog-image:hover .overlay {
+  background: rgba(0,0,0,0.55); /* more solid on hover */
+}
+
+.blog-image .overlay p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
