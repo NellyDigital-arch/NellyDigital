@@ -542,3 +542,36 @@ h3{ font-size: 1.125rem; font-weight: 700; }
     font-size: 0.9rem;
   }
 }
+/* Mobile (≤ 600px) adjustments */
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 15px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+  }
+
+  /* Reduce image height */
+  .blog-image {
+    padding-top: 40%; /* shorter than 16:9 for mobile */
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+
+  .blog-content h3 {
+    font-size: 1rem;
+  }
+
+  .blog-content p {
+    font-size: 0.9rem;
+  }
+
+  .blog-content .read-more {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
