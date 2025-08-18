@@ -204,30 +204,36 @@
       </div>
     </section>
 
-    <!-- Blog -->
-    <section id="blog" class="section-pad section-alt">
-      <div class="container">
-        <h2>Blog & News</h2>
-        <p class="section-sub">Articles, tutorials, and updates</p>
-        <div class="card-grid blog-grid">
-          <article class="card blog-card">
-            <h3>How to Launch a Brand Quickly</h3>
-            <p>Tips and steps for building your brand from scratch efficiently.</p>
-            <a href="#" class="link-arrow">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          <article class="card blog-card">
-            <h3>Design Tips for Local Businesses</h3>
-            <p>Simple design hacks to make your business stand out online.</p>
-            <a href="#" class="link-arrow">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          <article class="card blog-card">
-            <h3>Social Media Graphics That Work</h3>
-            <p>Create visual content that drives engagement and followers.</p>
-            <a href="#" class="link-arrow">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
+ <section id="blog" class="blog-section">
+  <div class="container">
+    <h2>Blog & News</h2>
+    <p>Articles, tutorials, and updates from Nelly Digital.</p>
+
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <article class="blog-card" data-title="How to Launch a Brand Quickly" data-content="Full article text for 'How to Launch a Brand Quickly' goes here...">
+        <h3>How to Launch a Brand Quickly</h3>
+        <p>Tips and steps for building your brand from scratch efficiently.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="blog-card" data-title="Design Tips for Local Businesses" data-content="Full article text for 'Design Tips for Local Businesses' goes here...">
+        <h3>Design Tips for Local Businesses</h3>
+        <p>Simple design hacks to make your local business stand out online.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="blog-card" data-title="Social Media Graphics That Work" data-content="Full article text for 'Social Media Graphics That Work' goes here...">
+        <h3>Social Media Graphics That Work</h3>
+        <p>Creating visual content that drives engagement and followers.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 
     <!-- FAQ -->
     <section id="faq" class="section-pad">
@@ -419,6 +425,34 @@ if (form) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
+<!-- Blog Modal -->
+<div id="blogModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalContent"></p>
+  </div>
+</div>
+<script>
+  const modal = document.getElementById("blogModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalContent = document.getElementById("modalContent");
+  const closeBtn = document.querySelector(".modal .close");
 
+  document.querySelectorAll(".blog-card .read-more").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      const card = btn.closest(".blog-card");
+      modalTitle.textContent = card.dataset.title;
+      modalContent.textContent = card.dataset.content;
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = e => { if(e.target == modal) modal.style.display = "none"; };
+</script>
+
+  
 </body>
 </html>
