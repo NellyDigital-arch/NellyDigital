@@ -962,3 +962,19 @@ h3{ font-size: 1.125rem; font-weight: 700; }
     flex: 1 1 200px;
   }
 }
+/* Remove blur effect on services section */
+.services-section,
+.services-section .card,
+.services-section .card-grid {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+/* Subtle hover effect on services cards */
+.services-section .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
