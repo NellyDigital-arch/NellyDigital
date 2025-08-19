@@ -616,3 +616,18 @@ h3{ font-size: 1.125rem; font-weight: 700; }
 #back-to-top:hover {
   transform: scale(1.1);
 }
+.blog-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* adjust if needed */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* darkens the image */
+}
