@@ -698,3 +698,144 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   transform: scale(1.05);
   transition: transform 0.5s ease;
 }
+/* Services section - online background images (Tech & Branding themed) */
+.card-grid .card:nth-child(1)::before {
+  background-image: url('https://images.unsplash.com/photo-1581090700227-4fc3ef29b35c?auto=format&fit=crop&w=800&q=80'); /* Logo Design */
+}
+
+.card-grid .card:nth-child(2)::before {
+  background-image: url('https://images.unsplash.com/photo-1581092795366-6db3b0c2f77d?auto=format&fit=crop&w=800&q=80'); /* Flyer & Poster */
+}
+
+.card-grid .card:nth-child(3)::before {
+  background-image: url('https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=800&q=80'); /* Web Design */
+}
+
+.card-grid .card:nth-child(4)::before {
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80'); /* Social Media Templates */
+}
+
+.card-grid .card:nth-child(5)::before {
+  background-image: url('https://images.unsplash.com/photo-1581093588401-2e2e353b3d4e?auto=format&fit=crop&w=800&q=80'); /* Branding Strategy */
+}
+
+.card-grid .card:nth-child(6)::before {
+  background-image: url('https://images.unsplash.com/photo-1581091012184-5c16fa1a7c0d?auto=format&fit=crop&w=800&q=80'); /* Print Materials */
+}
+/* Featured Work / Portfolio cards hover effect */
+.portfolio-grid .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid .portfolio-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-grid .portfolio-item:hover img {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.portfolio-grid .portfolio-item h3 {
+  text-align: center;
+  margin-top: 12px;
+  transition: text-shadow 0.3s ease;
+}
+
+.portfolio-grid .portfolio-item:hover h3 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4); /* Pop text on hover */
+}
+/* Featured Work / Portfolio - online background images */
+.portfolio-grid .portfolio-item:nth-child(1) img {
+  content: url('https://images.unsplash.com/photo-1605902711622-cfb43c443f89?auto=format&fit=crop&w=800&q=80'); /* Logo & Flyer */
+}
+
+.portfolio-grid .portfolio-item:nth-child(2) img {
+  content: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80'); /* Website Mockup */
+}
+
+.portfolio-grid .portfolio-item:nth-child(3) img {
+  content: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80'); /* Social Templates */
+}
+
+.portfolio-grid .portfolio-item:nth-child(4) img {
+  content: url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80'); /* Before & After Branding */
+}
+
+.portfolio-grid .portfolio-item:nth-child(5) img {
+  content: url('https://images.unsplash.com/photo-1581091012184-5c16fa1a7c0d?auto=format&fit=crop&w=800&q=80'); /* Event Poster & Promotion */
+}
+
+.portfolio-grid .portfolio-item:nth-child(6) img {
+  content: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80'); /* Business Card & Branding */
+}
+/* Portfolio card overlay gradients */
+.portfolio-grid .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.portfolio-grid .portfolio-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.portfolio-grid .portfolio-item:hover::before {
+  opacity: 0.4; /* Slightly lighter on hover */
+}
+
+.portfolio-grid .portfolio-item h3 {
+  position: relative;
+  z-index: 2; /* Ensure titles appear above overlay */
+  text-align: center;
+  color: #fff;
+  margin-top: 12px;
+}
+/* Services card overlay gradients */
+.card-grid .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-grid .card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-grid .card:hover::before {
+  opacity: 0.3;  /* Slightly lighter overlay on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.card-grid .card h3,
+.card-grid .card p,
+.card-grid .card .icon {
+  position: relative;
+  z-index: 2; /* Keep text/icons above overlay */
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.card-grid .card:hover h3,
+.card-grid .card:hover p,
+.card-grid .card:hover .icon {
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
