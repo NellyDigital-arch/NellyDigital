@@ -916,3 +916,49 @@ h3{ font-size: 1.125rem; font-weight: 700; }
 .whatsapp-button:hover {
   background-color: #128C7E;
 }
+/* Contact Info Styling */
+.contact-section .contact-list,
+.section-pad .contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-list li i {
+  font-size: 1.5rem;
+  color: #25D366; /* WhatsApp green for WhatsApp icons */
+  margin-right: 12px;
+}
+
+.contact-list li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+  color: #8b0000; /* Brand red on hover */
+}
+
+@media (min-width: 768px) {
+  /* Horizontal alignment on desktop */
+  .contact-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .contact-list li {
+    flex: 1 1 200px;
+  }
+}
