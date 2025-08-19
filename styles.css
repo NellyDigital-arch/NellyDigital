@@ -641,3 +641,60 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   transform: scale(1.05);
   transition: transform 0.5s ease;
 }
+ /* Services section - online background images */
+.card-grid .card {
+  position: relative;
+  color: #fff; /* Text color on images */
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-grid .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* light overlay to keep text readable */
+  z-index: 0;
+}
+
+.card-grid .card h3,
+.card-grid .card p,
+.card-grid .card .icon {
+  position: relative;
+  z-index: 1;
+}
+
+/* Specific backgrounds for each card */
+.card-grid .card:nth-child(1)::before {
+  background-image: url('https://images.unsplash.com/photo-1596495577886-d920f5acbcf0?auto=format&fit=crop&w=800&q=80'); /* Logo Design */
+}
+
+.card-grid .card:nth-child(2)::before {
+  background-image: url('https://images.unsplash.com/photo-1581092580493-0e202eea77c0?auto=format&fit=crop&w=800&q=80'); /* Flyer & Poster */
+}
+
+.card-grid .card:nth-child(3)::before {
+  background-image: url('https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=800&q=80'); /* Web Design */
+}
+
+.card-grid .card:nth-child(4)::before {
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80'); /* Social Media Templates */
+}
+
+.card-grid .card:nth-child(5)::before {
+  background-image: url('https://images.unsplash.com/photo-1581093588401-2e2e353b3d4e?auto=format&fit=crop&w=800&q=80'); /* Branding Strategy */
+}
+
+.card-grid .card:nth-child(6)::before {
+  background-image: url('https://images.unsplash.com/photo-1581091012184-5c16fa1a7c0d?auto=format&fit=crop&w=800&q=80'); /* Print Materials */
+}
+
+/* Hover effect for slight zoom */
+.card-grid .card:hover::before {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
