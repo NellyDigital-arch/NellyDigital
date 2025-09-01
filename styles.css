@@ -996,3 +996,86 @@ h3{ font-size: 1.125rem; font-weight: 700; }
 .whatsapp-left {
   display: none !important;
 }
+/* ===== Mobile Responsive Styles ===== */
+@media (max-width: 768px) {
+
+  /* Header & Navigation */
+  header {
+    padding: 10px 20px;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    max-width: 90%;
+  }
+
+  .hero p.lead {
+    font-size: 16px;
+  }
+
+  .cta-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Services Section */
+  .services-section .card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Featured Work / Portfolio */
+  .portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Contact Section */
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-form label {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer .container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Back to Top & Floating Buttons */
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+}
