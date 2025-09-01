@@ -992,3 +992,7 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   transform: none !important;
   box-shadow: none !important;
 }
+/* Hide only the left-floating WhatsApp icon */
+.whatsapp-left {
+  display: none !important;
+}
