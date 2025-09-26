@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Nelly Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Nelly Digital</a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Bright John Nelson</p>
+        <h1>Creative Design That Helps Brands Stand Out</h1>
+        <p class="lead">
+          Founder of Nelly Digital — I help startups, students, and small businesses grow with strong visual branding and modern web design.
+        </p>
+        <a href="index.html#contact" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-pad">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="section-sub">Meet Bright John Nelson</p>
+        <p>
+          I’m a Ugandan creative designer passionate about helping local brands grow through visual storytelling.
+          My focus is on clear, impactful logos, branding, and modern websites that make businesses stand out.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-pad">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="section-sub">Helping you grow with clear, professional design</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-shapes"></i></div>
+            <h3>Logo Design</h3>
+            <p>Unique, memorable logos that reflect your brand’s values.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-print"></i></div>
+            <h3>Flyer & Poster Design</h3>
+            <p>Eye-catching designs for events and promotions.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Web Design</h3>
+            <p>Clean, mobile-friendly websites that build trust online.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+            <h3>Social Media Templates</h3>
+            <p>Branded posts and templates that keep your feed consistent.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <h3>Branding Strategy</h3>
+            <p>Simple plans to position your business for growth.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+            <h3>Print Materials</h3>
+            <p>Business cards, brochures, and other materials that leave a strong impression.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2 class="section-title">Featured Work</h2>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="assets/logo-flyer-example.jpg" alt="Logo & flyer design">
+            <h3>Logo & flyer design for a local startup</h3>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="assets/website-mockup.jpg" alt="Website mockup">
+            <h3>Website for a student club</h3>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="assets/social-templates.jpg" alt="Social templates">
+            <h3>Social media templates for a boutique</h3>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="assets/before-after.jpg" alt="Before & after branding">
+            <h3>Rebranding refresh for a community project</h3>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="assets/event-poster.jpg" alt="Event poster">
+            <h3>Event poster & promotion for a campus event</h3>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="assets/business-card.jpg" alt="Business card">
+            <h3>Business card & stationery for a small business</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Nelly Digital — Vision Beyond Sound
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
