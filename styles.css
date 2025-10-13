@@ -1091,3 +1091,99 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   background: #1e88e5;
   color: #fff;
 }
+/* ==== HERO SECTION ==== */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #0d1117; /* fallback color if image doesn't load */
+  color: #fff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text .eyebrow {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e63946;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-cta .btn-portfolio {
+  background: #e63946;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-cta .btn-portfolio:hover {
+  background: #ff4757;
+}
+
+.hero-stats {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.hero-stats li {
+  font-weight: 500;
+  color: #ddd;
+}
+
+.hero-media .mock-device img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-media {
+    margin-top: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-sub {
+    font-size: 1rem;
+  }
+}
