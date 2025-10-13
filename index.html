@@ -413,15 +413,6 @@ if (form) {
 }
 
 </script>
-
-<!-- WhatsApp Button -->
-<a href="https://wa.me/256786336334" 
-   target="_blank" 
-   id="whatsapp-button" 
-   aria-label="Chat on WhatsApp">
-   <i class="fab fa-whatsapp"></i>
-</a>
-
 <!-- Back to Top Button -->
 <button id="back-to-top" aria-label="Back to Top">&#8679;</button>
 
@@ -436,6 +427,14 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+</script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
 </script>
 
   
