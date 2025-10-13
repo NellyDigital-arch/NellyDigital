@@ -1455,4 +1455,130 @@ h3{ font-size: 1.125rem; font-weight: 700; }
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
+/* Hero section layout */
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* centers content vertically */
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Hero text styling */
+.hero-text {
+  flex: 1 1 500px; /* responsive width */
+  text-align: center; /* center all text inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;
+}
+
+/* Center the hero CTA button */
+.hero-cta {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Hero button styling */
+.btn-portfolio {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 200, 255, 0.3);
+}
+
+/* Hero image styling */
+.hero-media {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-media img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.hero-title {
+  color: #ffffff; /* makes the text white */
+  text-align: center; /* ensure it's centered */
+}
+.hero-sub,
+.hero-stats li {
+  color: #ffffff;
+  text-align: center;
+}
+.hero-title {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* subtle shadow */
+}
+
+.hero-sub,
+.hero-stats li {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* softer shadow for smaller text */
+}
+/* Center and style the View Portfolio button */
+.hero-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-portfolio {
+  background-color: #00c16e; /* your brand green */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  background-color: #009f5a;
+  transform: translateY(-3px);
+}
+
+/* Optional: center hero section content fully */
+.hero-text {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+/* Center align Featured Work section */
+.portfolio-section {
+  text-align: center;
+}
+
+.portfolio-section .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff; /* or change to your preferred color */
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-section .section-subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Optional: spacing and alignment for the grid */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
