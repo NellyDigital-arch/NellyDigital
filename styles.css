@@ -1441,10 +1441,15 @@ textarea.form-control {
         margin-top: 1rem;
     }
 
-    .hero-signal {
-        right: -80px;
-        top: 10%;
-    }
+  .hero-signal {
+  right: 0;
+
+  opacity: .25;
+
+  transform:
+    translateY(-50%)
+    scale(.65);
+}
 
     .work-grid {
         grid-template-columns: 1fr;
