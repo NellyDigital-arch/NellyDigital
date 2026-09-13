@@ -588,25 +588,27 @@ strong {
    ========================================================= */
 
 .brand-statement {
-    padding-block: 5rem;
+  padding-block: clamp(5rem, 10vw, 9rem);
 
-    background: var(--white);
+  background: var(--green);
 
-    border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--green);
+}
+
+.brand-statement .eyebrow {
+  color: var(--orange);
 }
 
 .brand-statement h2 {
-    max-width: 900px;
-    margin-bottom: 1.5rem;
+  color: var(--white);
 }
 
 .brand-statement h2 span {
-    color: var(--green);
+  color: rgba(255,255,255,.55);
 }
 
 .brand-statement p {
-    max-width: 700px;
-    color: var(--text);
+  color: rgba(255,255,255,.72);
 }
 
 
