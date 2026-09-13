@@ -10,6 +10,7 @@
 
 :root {
     /* Brand colours */
+   --navy: #110054;
     --green: #009966;
     --green-dark: #007A52;
     --green-soft: #EAF7F2;
@@ -1053,7 +1054,7 @@ strong {
    ========================================================= */
 
 .contact-section {
-    background: var(--navy);
+  background: var(--green);
     color: var(--white);
 }
 
@@ -1162,11 +1163,12 @@ textarea.form-control {
    16. FOOTER
    ========================================================= */
 
-.footer {
-    padding-block: 3.5rem 1.5rem;
+.site-footer {
+  padding-block: 2.5rem;
 
-    background: #050F22;
-    color: rgba(255,255,255,.65);
+  background: var(--green-dark);
+
+  color: rgba(255,255,255,.6);
 }
 
 .footer h3,
